@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.configuration;
+
+/**
+ * @author Admin
+ *
+ */
+@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = "com.websystique.springmvc")
+public class TestConfiguration {
+
+}

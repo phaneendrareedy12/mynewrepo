@@ -1,0 +1,53 @@
+package com.service;
+
+import java.util.TreeSet;
+
+import org.springframework.stereotype.Service;
+
+import com.beans.Employee;
+
+@Service
+public class EmployeeService {
+
+	private TreeSet<Employee> employeeSet = new TreeSet<Employee>();
+
+	public boolean adEmployee(Employee employee) {
+
+		return employeeSet.add(employee);
+	}
+
+	public boolean updateOrDeleteEmployee(String employeeId) {
+		
+		Employee updateemployee = null;
+		for(Employee employee: employeeSet){
+			if(employee.getId().equals(employeeId))
+				updateemployee = employee;	
+		}
+		if (!employeeSet.contains(updateemployee)) {
+			return false;
+		} else {
+			employeeSet.remove(updateemployee);
+			employeeSet.add(updateemployee);
+			return true;
+		}
+
+	}
+
+	public boolean deleteEmployee(Employee employee) {
+		Employee updateemployee = null;
+		for(Employee employee: employeeSet){
+			if(employee.getId().equals(employeeId))
+				updateemployee = employee;	
+		}
+		if (!employeeSet.contains(updateemployee)) {
+			return false;
+		} else {
+			employeeSet.remove(updateemployee);
+			employeeSet.add(updateemployee);
+			return true;
+		}
+
+
+	}
+
+}

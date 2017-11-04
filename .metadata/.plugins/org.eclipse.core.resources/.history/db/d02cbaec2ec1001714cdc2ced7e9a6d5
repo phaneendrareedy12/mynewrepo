@@ -1,0 +1,24 @@
+package com.service;
+
+import java.util.TreeSet;
+
+import org.springframework.stereotype.Service;
+
+import com.beans.Employee;
+
+@Service
+public class EmployeeService {
+	
+	private TreeSet<Employee> employeeSet;
+	
+	public boolean adEmployee(Employee employee){
+		
+		
+	}
+	
+	public boolean updateEmployee(Employee employee) {
+		
+	}
+	
+
+}

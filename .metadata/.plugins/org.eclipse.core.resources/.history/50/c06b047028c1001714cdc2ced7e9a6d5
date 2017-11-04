@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.beans;
+
+/**
+ * @author Admin
+ *
+ */
+public class Employee {
+
+}

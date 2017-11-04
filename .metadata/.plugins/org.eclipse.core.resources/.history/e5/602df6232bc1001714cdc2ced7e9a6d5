@@ -1,0 +1,80 @@
+/**
+ * 
+ */
+package com.beans;
+
+import java.util.Date;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
+
+/**
+ * @author Admin
+ *
+ */
+public class Employee {
+	
+	@NotEmpty (message = "Id is required")
+	private String id;
+	
+	@NotEmpty(message = "Fisrt Name required")
+	private String fName;
+	
+	@NotEmpty(message = "Last Name required")
+	private String lName;
+	
+	@NotEmpty(message = "Email required")
+	@Email(message = "Email should be in correct format")
+	private String email;
+	
+	@NotEmpty(message = "Pincode required")
+	private int pincode;
+	
+	@NotEmpty(message = "Date of birth is required")
+	@DateTimeFormat(pattern="MM/dd/yyyy")
+	private Date birthDate;
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getfName() {
+		return fName;
+	}
+	public void setfName(String fName) {
+		this.fName = fName;
+	}
+	public String getlName() {
+		return lName;
+	}
+	public void setlName(String lName) {
+		this.lName = lName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public int getPincode() {
+		return pincode;
+	}
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
+	}
+	public Date getBirthDate() {
+		return birthDate;
+	}
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+	
+	@Override
+	public boolean equals(Employee employee) {
+		if(this.getId().equals(employee.getId())
+				return true;
+	}
+}
